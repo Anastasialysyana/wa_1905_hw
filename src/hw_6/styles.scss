@@ -14,26 +14,85 @@ body {
   width: 100%;
   min-height: 100%;
 }
+
 .main-container__wrapper {
-  width: 800px;
-  height: 500px;
-  margin: 20% auto;
+  max-width: 820px;
+  width: 100%;
+  margin: 15% auto;
 }
+
 .container-header {
   color: #fff;
 }
+
 .items__container {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
-.item-content {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
+
+.item-content__home,
+.item-content__contact,
+.item-content__photos,
+.item-content__about,
+.item-content__contact-item{
+  width: 120px;
+  height: 140px;
   background-color: cadetblue;
+  margin: 5px 15px 10px 0;
+}
+
+.item-content_hire,
+.item-content__about-item {
+  width: 256px;
+  height: 140px;
+  background-color: lavender;
+  margin: 5px 15px 10px 0;
+}
+
+.item-content__blog {
+  display: flex;
+  width: 390px;
+  height: 140px;
+  background-color: #1c1c1c;
+  margin: 5px 15px 10px 0;
+}
+
+.item-content__blog img {
+  height: 140px;
 }
 
 .item__header {
   color: white;
 }
+
+.item-content__home{
+  background-color: #38f;
+}
+
+.item-content__contact {
+  background-color: #f9be3e;
+}
+
+.item-content_hire{
+  background-color: rgb(211,87,62);
+}
+
+.item-content__photos{
+  background-color: rgb(89,176,226);
+}
+
+.item-content__about {
+  background-color: rgb(51,175,149);
+}
+
+.item-content__about-item {
+  background-color: rgb(134,167,63);
+}
+
+.item-content__contact-item {
+  background-color: rgb(126,91,140);
+}
+
+
