@@ -1,2 +1,2 @@
-import './hw_1.scss';
-import 'media.scss'
+import './styles.scss';
+import './media.scss';
