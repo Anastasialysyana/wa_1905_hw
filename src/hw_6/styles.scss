@@ -33,9 +33,7 @@ body {
 
 .items__container {
   width: 100%;
-  height: 100%;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .item-content__home,
@@ -45,7 +43,6 @@ body {
 .item-content__contact-item{
   width: 120px;
   height: 135px;
-  background-color: cadetblue;
   margin: 5px 5px 10px 10px;
   position: relative;
 }
@@ -67,6 +64,7 @@ body {
   background-color: #1c1c1c;
   margin: 5px 5px 10px 10px;
 }
+
 
 .item-content__blog img {
   height: 135px;
@@ -121,9 +119,6 @@ body {
 
 .item__header_blog {
   color: #fff;
-  position: absolute;
-  top: 10%;
-  left: 32%;
-  transform: translate(-10% -32%);
+  margin: 10px 0 0 10px;
   line-height: 20px;
 }
