@@ -1,0 +1,93 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+$navbar-height: 58px;
+$page-nav-item-margin: 36px;
+$page-nav-link-color: #ffffff;
+$logo-font-size: 26px;
+
+
+
+.page-header {
+  background-color: $background-dark;
+}
+.page-nav {
+  height: $navbar-height;
+  display: flex;
+  justify-content: space-between;
+  @include pageContainer;
+
+  &__logo {
+    color: $page-nav-link-color;
+    font-size: $logo-font-size;
+   @include flexCenterVertical;
+    font-weight: normal;
+  }
+
+  &__toggle {
+    display: none;
+  }
+  &__menu {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    margin: 0 $page-nav-item-margin;
+    display: flex;
+  }
+  &__link {
+    color: $page-nav-link-color;
+    @include flexCenterVertical;
+    justify-content: center;
+  }
+}
+
+.account-panel {
+  display: flex;
+  align-items: center;
+  &__btn {
+    margin: 0;
+  }
+}
+
+.baner{
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include pageContainer;
+
+  &__info {
+
+    width: 563px;
+    height: 403px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+
+  }
+  &__header {
+    font-weight: normal;
+    font-size: 48px;
+    color: $page-nav-link-color;
+    width: 512px;
+    height: 114px;
+  }
+  &__about {
+    font-weight: normal;
+    font-size: $base-font-size;
+    color: $page-nav-link-color;
+    width: 553px;
+    height: 128px;
+    line-height: 2;
+  }
+  &__img {
+    width: 463px;
+    height: 792px;
+    background-image: url("../../assets/images/artboard@2x.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+}
