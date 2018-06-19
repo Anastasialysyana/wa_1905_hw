@@ -4,10 +4,12 @@
   border:none;
   background-color: transparent;
   color: $btn-default-font-color;
-  padding: $base-font-size $base-font-size * 1.5;
+  //padding: $base-font-size $base-font-size * 1.5;
   border-top-left-radius: $btn-default-border-radius;
   border-bottom-right-radius: $btn-default-border-radius;
   font-size: $base-font-size;
+  width: 120px;
+  height: 40px;
   &_success {
     background-color: #1fdb84;
     box-shadow: 0 -8px 34px 0 rgba(31, 219, 132, 0.6);
@@ -18,4 +20,43 @@
 .baner__btn {
   width: 200px;
   height: 60px;
+}
+.page__btn {
+  outline: 0;
+  height: 60px;
+  background-color: #f1fff8;
+  border: solid 1px #aefdd9;
+  border-collapse: collapse;
+  font-size: $base-font-size;
+
+
+}
+
+.page-container__block_button-m  {
+  border-radius: 5px 0 0 5px;
+  color: #1fdb84;
+  background-color: white;
+  width: 162px;
+}
+
+.page-container__block_button-m:hover {
+  border: solid 2px #aefdd9;
+}
+
+.page-container__block_button-y  {
+  border-radius: 0 5px 5px 0;
+  margin-left: -5px ;
+  color: #6fdeaa;
+  width: 308px;
+}
+
+.page-container__block_button-y:hover {
+  border: solid 2px #aefdd9;
+}
+
+.page-container__block_paid-btn {
+  width: 255px;
+  height: 60px;
+  margin: 0 auto;
+  font-weight: 400;
 }

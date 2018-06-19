@@ -9,12 +9,17 @@ $logo-font-size: 26px;
 
 .page-header {
   background-color: $background-dark;
+
+
+
 }
 .page-nav {
   height: $navbar-height;
   display: flex;
   justify-content: space-between;
   @include pageContainer;
+
+
 
   &__logo {
     color: $page-nav-link-color;
@@ -54,17 +59,18 @@ $logo-font-size: 26px;
   justify-content: space-between;
   align-items: center;
   @include pageContainer;
+  top: 10px;
+
 
   &__info {
-
     width: 563px;
     height: 403px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-
-
+    top: 15%;
+    left: 0;
+    transform: translate(0, -15%);
   }
   &__header {
     font-weight: normal;
@@ -88,6 +94,11 @@ $logo-font-size: 26px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    top: 5%;
+    left: 0;
+    transform: translate( 0, 5%);
 
   }
 }
