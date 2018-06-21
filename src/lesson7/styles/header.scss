@@ -5,21 +5,15 @@ $page-nav-item-margin: 36px;
 $page-nav-link-color: #ffffff;
 $logo-font-size: 26px;
 
-
-
 .page-header {
   background-color: $background-dark;
-
-
-
 }
+
 .page-nav {
   height: $navbar-height;
   display: flex;
   justify-content: space-between;
   @include pageContainer;
-
-
 
   &__logo {
     color: $page-nav-link-color;
@@ -31,14 +25,17 @@ $logo-font-size: 26px;
   &__toggle {
     display: none;
   }
+
   &__menu {
     display: flex;
     justify-content: center;
   }
+
   &__item {
     margin: 0 $page-nav-item-margin;
     display: flex;
   }
+
   &__link {
     color: $page-nav-link-color;
     @include flexCenterVertical;
@@ -49,6 +46,7 @@ $logo-font-size: 26px;
 .account-panel {
   display: flex;
   align-items: center;
+
   &__btn {
     margin: 0;
   }
@@ -61,7 +59,6 @@ $logo-font-size: 26px;
   @include pageContainer;
   top: 10px;
 
-
   &__info {
     width: 563px;
     height: 403px;
@@ -72,6 +69,7 @@ $logo-font-size: 26px;
     left: 0;
     transform: translate(0, -15%);
   }
+
   &__header {
     font-weight: normal;
     font-size: 48px;
@@ -79,6 +77,7 @@ $logo-font-size: 26px;
     width: 512px;
     height: 114px;
   }
+
   &__about {
     font-weight: normal;
     font-size: $base-font-size;
@@ -87,6 +86,7 @@ $logo-font-size: 26px;
     height: 128px;
     line-height: 2;
   }
+
   &__img {
     width: 463px;
     height: 792px;
