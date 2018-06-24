@@ -10,6 +10,9 @@ $logo-font-size: 26px;
 }
 
 .page-nav {
+  @include mobile {
+    background-color: red;
+  }
   height: $navbar-height;
   display: flex;
   justify-content: space-between;
