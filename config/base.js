@@ -14,6 +14,7 @@ const baseConf = (_path) => {
         hw_6: ['babel-polyfill', './src/hw_6/hw_6.js'],
         lesson7: ['babel-polyfill', './src/lesson7/lesson7.js'],
         lesson9: ['babel-polyfill', './src/lesson9/lesson9.js'],
+        lesson10: ['babel-polyfill', './src/lesson10/lesson10.js'],
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {
@@ -102,5 +103,4 @@ const baseConf = (_path) => {
         plugins
     };
 };
-
 module.exports = baseConf;
