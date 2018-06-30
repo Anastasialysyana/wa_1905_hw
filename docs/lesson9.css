@@ -1,0 +1,30 @@
+body {
+  background-color: #f1fff8; }
+
+.traffic-light {
+  width: 180px;
+  height: 490px;
+  background-color: #32325c;
+  border-radius: 16px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 10% auto;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.4); }
+  .traffic-light__lamp {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #6fdeaa;
+    margin: 0 auto;
+    border: none;
+    outline: none; }
+  .traffic-light .traffic-light__lamp_red-btn.traffic-light__lamp-active {
+    background-color: red; }
+  .traffic-light .traffic-light__lamp_yellow-btn.traffic-light__lamp-active {
+    background-color: yellow; }
+  .traffic-light .traffic-light__lamp_green-btn.traffic-light__lamp-active {
+    background-color: green; }
