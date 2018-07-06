@@ -1,0 +1,1 @@
+import './js_for_kids.scss'
