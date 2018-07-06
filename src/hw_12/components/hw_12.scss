@@ -1,0 +1,95 @@
+body {
+  background-color: #5b6c94;
+}
+
+.main-container__lamps {
+  width: 1000px;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1fff8;
+  transform: translate(0, 250px);
+  border-radius: 15px;
+  &_box {
+    width: 150px;
+    height: 150px;
+    background-color: #f1fff8;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &_box-lamp {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  &_box-btn {
+    border: none;
+    border-radius: 3px;
+    width: 95px;
+    height: 35px;
+    &-active {
+      background-color: #1fdb84;
+    }
+
+  }
+  &_box-lamp-green {
+    background-color: #f1fff8;
+    border: 2px solid darkslategrey;
+    &.main-container__lamps_box-lamp-active {
+      background-color: #1fdb84;
+      border: 2px solid darkslategrey;
+    }
+  }
+
+  &_box-lamp-yellow {
+    background-color: #f1fff8;
+    border: 2px solid darkslategrey;
+    &.main-container__lamps_box-lamp-active {
+      background-color: #f9be3e;
+      border: 2px solid darkslategrey;
+    }
+  }
+  &_box-lamp-orange {
+
+    background-color: #f1fff8;
+    border: 2px solid darkslategrey;
+    &.main-container__lamps_box-lamp-active {
+      background-color: chocolate;
+      border: 2px solid darkslategrey;
+    }
+  }
+  &_box-lamp-blue {
+    background-color: #f1fff8;
+    border: 2px solid darkslategrey;
+    &.main-container__lamps_box-lamp-active {
+      background-color: #0a8aff;
+      border: 2px solid darkslategrey;
+    }
+  }
+  &_box-lamp-violet {
+    background-color: #f1fff8;
+    border: 2px solid darkslategrey;
+    &.main-container__lamps_box-lamp-active {
+      background-color: #7e5b8c ;
+      border: 2px solid darkslategrey;
+    }
+  }
+}
+
+.main-container__lamps_btn {
+  border: none;
+  border-radius: 3px;
+  width: 150px;
+  height: 50px;
+  margin-right: 10px;
+  font-weight: bold;
+  &-active {
+    background-color: #1fdb84;
+  }
+}
+

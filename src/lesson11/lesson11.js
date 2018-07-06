@@ -1,4 +1,5 @@
-import './lesson11.scss'
+import { Lighter } from './components/lighter/lighter';
+const firstLighter = new Lighter(document.querySelector('#lighter1'));
 
 // function test() {
 //     console.log('Test');
@@ -130,50 +131,53 @@ import './lesson11.scss'
 // person2.greet();
 
 
-function  greeting (){
-    console.log (this);
-    console.log('Hello! I am  ' + this.name + ' and my owner`s name ' + this.owner);
-}
+// function  greeting (){
+//     console.log (this);
+//     console.log('Hello! I am  ' + this.name + ' and my owner`s name ' + this.owner);
+// }
+//
+// function Animal(name, owner) {
+//     this.name = name;
+//     this.owner = owner;
+//     this.greet = greeting;
+//
+// }
+// function Horse(name, owner, place) {
+//     this.name = name;
+//     this.owner = owner;
+//     this.greet = greeting;
+//     this.place = place;
+//     this.horse = function () {
+//         console.log( ' and my favorite place is ' + this.place);
+//     }
+// }
+//
+// function Bird(name, owner, place, weight) {
+//     this.name = name;
+//     this.owner = owner;
+//     this.greet = greeting;
+//     this.place = place;
+//     this.weight = weight;
+//     this.bird = function () {
+//         console.log( ' and my favorite place is ' + this.place + ' in view of that I am bird, I have a small weight like a ' + this.weight);
+//     }
+// }
+//
+// const animal = new Animal('Kitty', 'Lola');
+// const animal2 = new Animal('Sharik', 'Jacklin');
+// const animal3 = new Horse('Baron', 'Lisa', 'San-Francisco');
+// const animal4 = new Horse('Lucky', 'Happy', 'Arizona');
+// const animal5 = new Bird('Pippy', 'Carol', 'Ecuador', '200 gr');
+//
+// animal.greet();
+// animal2.greet();
+// animal3.greet();
+// animal3.horse();
+// animal4.greet();
+// animal4.horse();
+// animal5.greet();
+// animal5.bird();
 
-function Animal(name, owner) {
-    this.name = name;
-    this.owner = owner;
-    this.greet = greeting;
 
-}
-function Horse(name, owner, place) {
-    this.name = name;
-    this.owner = owner;
-    this.greet = greeting;
-    this.place = place;
-    this.horse = function () {
-        console.log( ' and my favorite place is ' + this.place);
-    }
-}
 
-function Bird(name, owner, place, weight) {
-    this.name = name;
-    this.owner = owner;
-    this.greet = greeting;
-    this.place = place;
-    this.weight = weight;
-    this.bird = function () {
-        console.log( ' and my favorite place is ' + this.place + ' in view of that I am bird, I have a small weight like a ' + this.weight);
-    }
-}
-
-const animal = new Animal('Kitty', 'Lola');
-const animal2 = new Animal('Sharik', 'Jacklin');
-const animal3 = new Horse('Baron', 'Lisa', 'San-Francisco');
-const animal4 = new Horse('Lucky', 'Happy', 'Arizona');
-const animal5 = new Bird('Pippy', 'Carol', 'Ecuador', '200 gr');
-
-animal.greet();
-animal2.greet();
-animal3.greet();
-animal3.horse();
-animal4.greet();
-animal4.horse();
-animal5.greet();
-animal5.bird();
 
