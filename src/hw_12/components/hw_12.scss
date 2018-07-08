@@ -12,84 +12,86 @@ body {
   background-color: #f1fff8;
   transform: translate(0, 250px);
   border-radius: 15px;
-  &_box {
-    width: 150px;
-    height: 150px;
-    background-color: #f1fff8;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &_box-lamp {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-  }
-  &_box-btn {
-    border: none;
-    border-radius: 3px;
-    width: 95px;
-    height: 35px;
-    &-active {
-      background-color: #1fdb84;
-    }
-
-  }
-  &_box-lamp-green {
-    background-color: #f1fff8;
-    border: 2px solid darkslategrey;
-    &.main-container__lamps_box-lamp-active {
-      background-color: #1fdb84;
-      border: 2px solid darkslategrey;
-    }
-  }
-
-  &_box-lamp-yellow {
-    background-color: #f1fff8;
-    border: 2px solid darkslategrey;
-    &.main-container__lamps_box-lamp-active {
-      background-color: #f9be3e;
-      border: 2px solid darkslategrey;
-    }
-  }
-  &_box-lamp-orange {
-
-    background-color: #f1fff8;
-    border: 2px solid darkslategrey;
-    &.main-container__lamps_box-lamp-active {
-      background-color: chocolate;
-      border: 2px solid darkslategrey;
-    }
-  }
-  &_box-lamp-blue {
-    background-color: #f1fff8;
-    border: 2px solid darkslategrey;
-    &.main-container__lamps_box-lamp-active {
-      background-color: #0a8aff;
-      border: 2px solid darkslategrey;
-    }
-  }
-  &_box-lamp-violet {
-    background-color: #f1fff8;
-    border: 2px solid darkslategrey;
-    &.main-container__lamps_box-lamp-active {
-      background-color: #7e5b8c ;
-      border: 2px solid darkslategrey;
-    }
-  }
 }
 
-.main-container__lamps_btn {
+    .bulb {
+      width: 150px;
+      height: 150px;
+      background-color: #f1fff8;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      &__lighter_green {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: lavender;
+      }
+      &__lighter_yellow {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: lavender;
+      }
+      &__lighter_orange {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: lavender;
+      }
+      &__lighter_blue {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: lavender;
+      }
+      &__lighter_violet {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: lavender;
+      }
+      &__control {
+        border: none;
+        border-radius: 8px;
+        width: 120px;
+        height: 35px;
+      }
+      &_active {
+        .bulb__lighter_green {
+          border: 2px solid darkslategrey;
+          background-color: #1fdb84;
+        }
+        .bulb__lighter_yellow {
+          background-color: #f9be3e;
+          border: 2px solid darkslategrey;
+        }
+        .bulb__lighter_orange {
+          background-color: chocolate;
+          border: 2px solid darkslategrey;
+        }
+        .bulb__lighter_blue {
+          background-color: #0a8aff;
+          border: 2px solid darkslategrey;
+        }
+        .bulb__lighter_violet {
+          background-color: #7e5b8c;
+          border: 2px solid darkslategrey;
+        }
+        .bulb__control {
+          background-color: #1fdb84;
+        }
+      }
+    }
+
+.toggle__btn {
   border: none;
   border-radius: 3px;
   width: 150px;
   height: 50px;
   margin-right: 10px;
   font-weight: bold;
-  &-active {
-    background-color: #1fdb84;
-  }
 }
 
