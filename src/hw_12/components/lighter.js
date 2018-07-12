@@ -52,15 +52,14 @@ import './hw_12.scss'
 export class Lighter {
     constructor(targetEl) {
         this.target = targetEl;
-        //this.control = targetEl.querySelector('.bulb__control');
-        // this.lighter = targetEl.querySelector('.bulb__lighter_green');
-        // this.lighter = targetEl.querySelector('.bulb__lighter_yellow');
-        // this.lighter = targetEl.querySelector('.bulb__lighter_orange');
-        // this.lighter = targetEl.querySelector('.bulb__lighter_blue');
-        // this.lighter = targetEl.querySelector('.bulb__lighter_violet');
+        this.control = targetEl.querySelector('.bulb__control');
+        this.lighter = targetEl.querySelector('.bulb__lighter_green');
+        this.lighter = targetEl.querySelector('.bulb__lighter_yellow');
+        this.lighter = targetEl.querySelector('.bulb__lighter_orange');
+        this.lighter = targetEl.querySelector('.bulb__lighter_blue');
+        this.lighter = targetEl.querySelector('.bulb__lighter_violet');
         this.isEnabled = false;
         console.log(this);
-        this.render();
         this.control.addEventListener('click', () => this.toggle());
     }
 
@@ -69,75 +68,41 @@ export class Lighter {
         this.isEnabled = true;
 
     }
+
     switchOff() {
         this.target.classList.remove('bulb_active');
         this.isEnabled = false;
     }
+
     toggle() {
-        if(this.isEnabled) {
+        if (this.isEnabled) {
             this.switchOff();
         } else {
             this.switchOn()
         }
     }
-
-     render() {
-        this.control = document.createElement('button');
-        this.lighter = document.createElement('div');
-
-        this.control.classList.add('bulb__control');
-
-         this.lighter.classList.add('bulb__lighter_green');
-
-
-         this.control.textContent = 'Toggle';
-
-        this.target.appendChild(this.lighter);
-         this.target.appendChild(this.control);
-         this.target.classList.add('bulb');
-
-
-    }
-
-
 }
 
-export class Garland {
-    constructor(targetEl) {
-        this.target = targetEl;
-        this.bulbs = [];
-        this.render();
-        // this.control.addEventListener('click', () => this.toggleAll());
-
-    }
-    render() {
-        this.control = document.createElement('button');
-        this.output = document.createElement('div');
-
-        this.output.classList.add('garland__output');
-        this.control.classList.add('garland__control');
-
-        this.control.textContent = 'Add';
-
-        this.target.appendChild(this.output);
-        this.target.appendChild(this.control);
-
-
-
-
-    }
-
-
-add() {
-        const bulbContainer = document.createElement('div');
-        const bulb = new Bulb(bulbContainer);
-        this.bulbs.push(bulb);
-
-        this.output.appendChild(bulbContainer);
-}
-
-
-}
+//      render() {
+//         this.control = document.createElement('button');
+//         this.lighter = document.createElement('div');
+//
+//         this.control.classList.add('bulb__control');
+//
+//          this.lighter.classList.add('bulb__lighter_green');
+//
+//
+//          this.control.textContent = 'Toggle';
+//
+//         this.target.appendChild(this.lighter);
+//          this.target.appendChild(this.control);
+//          this.target.classList.add('bulb');
+//
+//
+//     }
+//
+//
+// }
 
 
 

@@ -6,21 +6,35 @@ export class Garland {
         this.target = targetEl;
         this.bulbs = [];
         this.render();
-        this.control.addEventListener('click', () => this.add());
+        this.controlAdd.addEventListener('click', () => this.add());
     }
+
     render() {
-        this.control = document.createElement('button');
         this.output = document.createElement('div');
-
         this.output.classList.add('garland__output');
-        this.control.classList.add('garland__control');
-
-        this.control.textContent = 'Add';
-
         this.target.appendChild(this.output);
-        this.target.appendChild(this.control);
-
         this.target.classList.add('garland');
+        this.renderControls();
+    }
+
+    renderControls () {
+        this.controlAdd = document.createElement('button');
+        this.controlSwitchOnAll = document.createElement('button');
+        this.controlSwitchOffAll = document.createElement('button');
+        this.controlAdd.classList.add('garland__control');
+
+
+        this.controlAdd.textContent = 'Add';
+        this.controlSwitchOnAll.textContent = 'Toggle On';
+        this.controlSwitchOffAll.textContent = 'Toggle Off';
+
+        this.controlAdd.addEventListener('click', ()=> this.add);
+        this.controlSwitchOnAll.addEventListener('click', ()=> this.toggleOn);
+        this.controlSwitchOffAll.addEventListener('click', ()=> this.toggleOff);
+
+        this.target.appendChild(this.controlAdd);
+        this.target.appendChild(this.controlSwitchOnAll);
+        this.target.appendChild(this.controlSwitchOffAll);
     }
 
     add() {
@@ -31,5 +45,16 @@ export class Garland {
 
         this.output.appendChild(bulbContainer);
 
+    }
+
+    toggleOn() {
+        this.bulbs.forEach((bulb) => {
+            bulb.switchOn();
+        });
+    }
+    toggleOff() {
+        this.bulbs.forEach((bulb) => {
+            bulb.switchOff();
+        });
     }
 }
