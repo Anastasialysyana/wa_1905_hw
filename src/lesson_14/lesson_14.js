@@ -4,7 +4,7 @@ import { Select } from './components/select/select';
 
 import './lesson_14.scss';
 
-import './components/select/select';
+//import './components/select/select
 
 const bulb = new Bulb(document.querySelector('#bulb1'));
 const graland = new Garland(document.querySelector('#garland1'));
