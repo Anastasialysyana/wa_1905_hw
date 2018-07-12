@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 340);
+/******/ 	return __webpack_require__(__webpack_require__.s = 342);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9047,23 +9047,25 @@ module.exports = function (regExp, replace) {
 /* 337 */,
 /* 338 */,
 /* 339 */,
-/* 340 */
+/* 340 */,
+/* 341 */,
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(341);
+module.exports = __webpack_require__(343);
 
 
 /***/ }),
-/* 341 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(342);
+__webpack_require__(344);
 
-var _lighter = __webpack_require__(343);
+var _lighter = __webpack_require__(345);
 
 var LighterElement = document.querySelector('#lighter1');
 var LighterElement2 = document.querySelector('#lighter2');
@@ -9112,13 +9114,13 @@ var LighterElement3 = document.querySelector('#lighter3');
 //trafficLight3();
 
 /***/ }),
-/* 342 */
+/* 344 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 343 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9129,7 +9131,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.lighter = lighter;
 
-__webpack_require__(344);
+__webpack_require__(346);
 
 function lighter(LighterElement) {
 
@@ -9167,7 +9169,7 @@ function lighter(LighterElement) {
 }
 
 /***/ }),
-/* 344 */
+/* 346 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

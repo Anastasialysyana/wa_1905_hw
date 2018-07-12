@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 348);
+/******/ 	return __webpack_require__(__webpack_require__.s = 350);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9055,21 +9055,25 @@ module.exports = function (regExp, replace) {
 /* 345 */,
 /* 346 */,
 /* 347 */,
-/* 348 */
+/* 348 */,
+/* 349 */,
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(349);
+module.exports = __webpack_require__(351);
 
 
 /***/ }),
-/* 349 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(350);
+var _lighter = __webpack_require__(352);
+
+var firstLighter = new _lighter.Lighter(document.querySelector('#lighter1'));
 
 // function test() {
 //     console.log('Test');
@@ -9098,50 +9102,35 @@ __webpack_require__(350);
 // person.greet();
 // person2.greet();
 
-function greeting() {
-    console.log(this);
-    console.log('Hello my name is, ' + this.name);
-}
 
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-    this.greet = greeting;
-}
-
-var person = new Person('John', 30);
-var person2 = new Person('Jack', 20);
-
-person.greet();
-person2.greet();
-
-function greeting() {
-    console.log(this);
-    console.log('Hello my name is, ' + this.name, 'I am ' + this.age, 'years old');
-}
-
-function Developer(name, age, language) {
-    this.name = name;
-    this.age = age;
-    this.language = language;
-    this.greet = greeting;
-}
-
-var developer = new Developer('John', 30);
-var developer2 = new Developer('Lola', 19);
-var developer3 = new Developer('Lili', 16);
-var developer4 = new Developer('Monica', 35);
-var developer5 = new Developer('Pusya', 67);
-var developer6 = new Developer('Jacklin', 56);
-var developer7 = new Developer('Jackass', 26);
-
-developer.greet();
-developer2.greet();
-developer3.greet();
-developer4.greet();
-developer5.greet();
-developer6.greet();
-developer7.greet();
+// function  greeting (){
+//     console.log (this);
+//     console.log('Hello my name is, ' + this.name, 'I am ' + this.age, 'years old');
+// }
+//
+// function Developer(name, age, language) {
+//     this.name = name;
+//     this.age = age;
+//     this.language = language;
+//     this.greet = greeting;
+// }
+//
+// const developer = new Developer('John', 30);
+// const developer2 = new Developer('Lola', 19);
+// const developer3 = new Developer('Lili', 16);
+// const developer4 = new Developer('Monica', 35);
+// const developer5 = new Developer('Pusya', 67);
+// const developer6 = new Developer('Jacklin', 56);
+// const developer7 = new Developer('Jackass', 26);
+//
+//
+// developer.greet();
+// developer2.greet();
+// developer3.greet();
+// developer4.greet();
+// developer5.greet();
+// developer6.greet();
+// developer7.greet();
 
 //
 // const products = [
@@ -9196,8 +9185,137 @@ developer7.greet();
 // person.greet();
 // person2.greet();
 
+// function  greeting (){
+//     console.log (this);
+//     console.log('Hello my name is, ' + this.name);
+// }
+//
+//
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.greet = greeting;
+//
+// }
+//
+// const person = new Person('John', 30);
+// const person2 = new Person('Jack', 20);
+//
+// person.greet();
+// person2.greet();
+
+
+// function  greeting (){
+//     console.log (this);
+//     console.log('Hello! I am  ' + this.name + ' and my owner`s name ' + this.owner);
+// }
+//
+// function Animal(name, owner) {
+//     this.name = name;
+//     this.owner = owner;
+//     this.greet = greeting;
+//
+// }
+// function Horse(name, owner, place) {
+//     this.name = name;
+//     this.owner = owner;
+//     this.greet = greeting;
+//     this.place = place;
+//     this.horse = function () {
+//         console.log( ' and my favorite place is ' + this.place);
+//     }
+// }
+//
+// function Bird(name, owner, place, weight) {
+//     this.name = name;
+//     this.owner = owner;
+//     this.greet = greeting;
+//     this.place = place;
+//     this.weight = weight;
+//     this.bird = function () {
+//         console.log( ' and my favorite place is ' + this.place + ' in view of that I am bird, I have a small weight like a ' + this.weight);
+//     }
+// }
+//
+// const animal = new Animal('Kitty', 'Lola');
+// const animal2 = new Animal('Sharik', 'Jacklin');
+// const animal3 = new Horse('Baron', 'Lisa', 'San-Francisco');
+// const animal4 = new Horse('Lucky', 'Happy', 'Arizona');
+// const animal5 = new Bird('Pippy', 'Carol', 'Ecuador', '200 gr');
+//
+// animal.greet();
+// animal2.greet();
+// animal3.greet();
+// animal3.horse();
+// animal4.greet();
+// animal4.horse();
+// animal5.greet();
+// animal5.bird();
+
 /***/ }),
-/* 350 */
+/* 352 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Lighter = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(353);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var LIGHTER_LIGHT_CLASS_NAME = 'main-container__lamps_box-lamp';
+var LIGHTER_LIGHT_ACTIVE_CLASS_NAME = 'main-container__lamps_box-lamp-green-active';
+
+var Lighter = function () {
+    function Lighter(targetElement) {
+        _classCallCheck(this, Lighter);
+
+        this.targetElement = targetElement;
+        this.lights = this.targetElement.querySelectorAll('.' + LIGHTER_LIGHT_CLASS_NAME);
+        console.log(this);
+        this.attachEvents();
+    }
+
+    _createClass(Lighter, [{
+        key: 'switchOffLights',
+        value: function switchOffLights() {
+            this.lights.forEach(function (light) {
+                light.classList.remove(LIGHTER_LIGHT_ACTIVE_CLASS_NAME);
+            });
+        }
+    }, {
+        key: 'swithOnLight',
+        value: function swithOnLight(element) {
+            element.classList.add(LIGHTER_LIGHT_ACTIVE_CLASS_NAME);
+        }
+    }, {
+        key: 'attachEvents',
+        value: function attachEvents() {
+            var _this = this;
+
+            this.lights.forEach(function (light) {
+                light.addEventListener('click', function () {
+                    _this.switchOffLights();
+                    _this.swithOnLight(light);
+                });
+            });
+        }
+    }]);
+
+    return Lighter;
+}();
+
+exports.Lighter = Lighter;
+
+/***/ }),
+/* 353 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

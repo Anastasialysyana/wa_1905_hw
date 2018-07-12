@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 335);
+/******/ 	return __webpack_require__(__webpack_require__.s = 363);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9035,39 +9035,354 @@ module.exports = function (regExp, replace) {
 
 /***/ }),
 /* 327 */,
-/* 328 */,
+/* 328 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Bulb = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(365);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Bulb = exports.Bulb = function () {
+    function Bulb(targetEl) {
+        var _this = this;
+
+        _classCallCheck(this, Bulb);
+
+        this.target = targetEl;
+        this.isEnabled = false;
+        this.render();
+        this.control.addEventListener('click', function () {
+            return _this.toggle();
+        });
+    }
+
+    _createClass(Bulb, [{
+        key: 'switchOn',
+        value: function switchOn() {
+            this.target.classList.add('bulb_active');
+            this.isEnabled = true;
+        }
+    }, {
+        key: 'switchOff',
+        value: function switchOff() {
+            this.target.classList.remove('bulb_active');
+            this.isEnabled = false;
+        }
+    }, {
+        key: 'toggle',
+        value: function toggle() {
+            if (this.isEnabled) {
+                this.switchOff();
+            } else {
+                this.switchOn();
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            this.control = document.createElement('button');
+            this.lighter = document.createElement('div');
+
+            this.control.classList.add('bulb__control');
+            this.control.classList.add('bulb__lighter');
+
+            this.control.textContent = 'Toggle';
+
+            this.target.appendChild(this.lighter);
+            this.target.appendChild(this.control);
+            this.target.classList.add('bulb');
+        }
+    }]);
+
+    return Bulb;
+}();
+
+/***/ }),
 /* 329 */,
 /* 330 */,
 /* 331 */,
 /* 332 */,
 /* 333 */,
 /* 334 */,
-/* 335 */
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(336);
+module.exports = __webpack_require__(364);
 
 
 /***/ }),
-/* 336 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(337);
+var _bulb = __webpack_require__(328);
 
-__webpack_require__(338);
+var _garland = __webpack_require__(366);
+
+var _select = __webpack_require__(367);
+
+__webpack_require__(369);
+
+var bulb = new _bulb.Bulb(document.querySelector('#bulb1'));
+var graland = new _garland.Garland(document.querySelector('#garland1'));
+var countries = ['USA', 'UKRAINE', 'MONTENEGRO', 'FRANCE'];
+var countriesList = new _select.Select(document.querySelector('#countriesList'), countries);
 
 /***/ }),
-/* 337 */
+/* 365 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 338 */
+/* 366 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Garland = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _bulb = __webpack_require__(328);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Garland = exports.Garland = function () {
+    function Garland(targetEl) {
+        var _this = this;
+
+        _classCallCheck(this, Garland);
+
+        this.target = targetEl;
+        this.bulbs = [];
+        this.render();
+        this.controlAdd.addEventListener('click', function () {
+            return _this.add();
+        });
+    }
+
+    _createClass(Garland, [{
+        key: 'render',
+        value: function render() {
+            this.output = document.createElement('div');
+            this.output.classList.add('garland__output');
+            this.target.appendChild(this.output);
+            this.target.classList.add('garland');
+            this.renderControls();
+        }
+    }, {
+        key: 'renderControls',
+        value: function renderControls() {
+            var _this2 = this;
+
+            this.controlAdd = document.createElement('button');
+            this.controlSwitchOnAll = document.createElement('button');
+            this.controlSwitchOffAll = document.createElement('button');
+            this.controlAdd.classList.add('garland__control');
+
+            this.controlAdd.textContent = 'Add';
+            this.controlSwitchOnAll.textContent = 'Toggle On';
+            this.controlSwitchOffAll.textContent = 'Toggle Off';
+
+            this.controlAdd.addEventListener('click', function () {
+                return _this2.add;
+            });
+            this.controlSwitchOnAll.addEventListener('click', function () {
+                return _this2.toggleOn;
+            });
+            this.controlSwitchOffAll.addEventListener('click', function () {
+                return _this2.toggleOff;
+            });
+
+            this.target.appendChild(this.controlAdd);
+            this.target.appendChild(this.controlSwitchOnAll);
+            this.target.appendChild(this.controlSwitchOffAll);
+        }
+    }, {
+        key: 'add',
+        value: function add() {
+            var bulbContainer = document.createElement('div');
+            var bulb = new _bulb.Bulb(bulbContainer);
+
+            this.bulbs.push(bulb);
+
+            this.output.appendChild(bulbContainer);
+        }
+    }, {
+        key: 'toggleOn',
+        value: function toggleOn() {
+            this.bulbs.forEach(function (bulb) {
+                bulb.switchOn();
+            });
+        }
+    }, {
+        key: 'toggleOff',
+        value: function toggleOff() {
+            this.bulbs.forEach(function (bulb) {
+                bulb.switchOff();
+            });
+        }
+    }]);
+
+    return Garland;
+}();
+
+/***/ }),
+/* 367 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Select = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(368);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SELECT_CLASS_NAME = 'select';
+var SELECT_EXPAND_CLASS_NAME = SELECT_CLASS_NAME + '_expand';
+var SELECT_TITLE_CLASS_NAME = SELECT_CLASS_NAME + '__title';
+var SELECT_OPTIONS_CLASS_NAME = SELECT_CLASS_NAME + '__options';
+var SELECT_OPTION_CLASS_NAME = SELECT_CLASS_NAME + '__option';
+var SELECT_CONTROL_CLASS_NAME = SELECT_CLASS_NAME + '__control';
+
+var Select = exports.Select = function () {
+    /**
+     * @param {HTMLElement} target element where we need to render component
+     * @param {Array<String>} options Options for drop down menu
+     */
+    function Select(target, options) {
+        _classCallCheck(this, Select);
+
+        this.targetElement = target;
+        this.options = options;
+        this.render();
+        this.renderList();
+    }
+
+    _createClass(Select, [{
+        key: 'render',
+        value: function render() {
+            var _this = this;
+
+            this.titleElement = document.createElement('button');
+            this.listElement = document.createElement('ul');
+
+            this.titleElement.classList.add(SELECT_TITLE_CLASS_NAME);
+            this.listElement.classList.add(SELECT_OPTIONS_CLASS_NAME);
+
+            this.titleElement.textContent = 'Please select...';
+            this.targetElement.appendChild(this.titleElement);
+            this.targetElement.appendChild(this.listElement);
+            this.targetElement.classList.add(SELECT_CLASS_NAME);
+
+            this.titleElement.addEventListener('click', function () {
+                return _this.toggle();
+            });
+        }
+    }, {
+        key: 'toggle',
+        value: function toggle() {
+            this.targetElement.classList.toggle(SELECT_EXPAND_CLASS_NAME);
+        }
+        /**
+         *
+         * @param {string} option
+         */
+
+    }, {
+        key: 'select',
+        value: function select(option) {
+            this.titleElement.textContent = option;
+            this.targetElement.classList.remove(SELECT_EXPAND_CLASS_NAME);
+        }
+    }, {
+        key: 'renderList',
+        value: function renderList() {
+            var _this2 = this;
+
+            this.options.forEach(function (option) {
+                var li = document.createElement('li');
+                var button = document.createElement('button');
+
+                li.classList.add(SELECT_OPTION_CLASS_NAME);
+                button.classList.add(SELECT_CONTROL_CLASS_NAME);
+
+                button.textContent = option;
+
+                button.addEventListener('click', function () {
+                    return _this2.select(option);
+                });
+
+                li.appendChild(button);
+                _this2.listElement.appendChild(li);
+            });
+        }
+    }]);
+
+    return Select;
+}();
+
+/***/ }),
+/* 368 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 369 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

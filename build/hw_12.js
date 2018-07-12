@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 335);
+/******/ 	return __webpack_require__(__webpack_require__.s = 354);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9034,7 +9034,12 @@ module.exports = function (regExp, replace) {
 
 
 /***/ }),
-/* 327 */,
+/* 327 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 328 */,
 /* 329 */,
 /* 330 */,
@@ -9042,35 +9047,180 @@ module.exports = function (regExp, replace) {
 /* 332 */,
 /* 333 */,
 /* 334 */,
-/* 335 */
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(336);
+module.exports = __webpack_require__(355);
 
 
 /***/ }),
-/* 336 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(337);
+__webpack_require__(327);
 
-__webpack_require__(338);
+var _lighter = __webpack_require__(356);
+
+var Lighter1 = new _lighter.Lighter(document.querySelector('#lighter1'));
+var Lighter2 = new _lighter.Lighter(document.querySelector('#lighter2'));
+var Lighter3 = new _lighter.Lighter(document.querySelector('#lighter3'));
+var Lighter4 = new _lighter.Lighter(document.querySelector('#lighter4'));
+var Lighter5 = new _lighter.Lighter(document.querySelector('#lighter5'));
 
 /***/ }),
-/* 337 */
-/***/ (function(module, exports) {
+/* 356 */
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
 
-/***/ }),
-/* 338 */
-/***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Lighter = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(327);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// const LIGHTER_LIGHT_CLASS_NAME = 'main-container__lamps_box-lamp';
+// const LIGHTER_LIGHT_ACTIVE_CLASS_NAME = 'main-container__lamps_box-lamp-active';
+
+//class Lighter {
+//     constructor(targetElement) {
+//         this.targetElement = targetElement;
+//         this.lights = this.targetElement.querySelectorAll('.' + LIGHTER_LIGHT_CLASS_NAME);
+//         console.log(this);
+//         this.isEnabled = false;
+//         this.attachEvents();
+//     }
+//     switchOffLights() {
+//         this.lights.forEach((light) => {
+//             light.classList.remove(LIGHTER_LIGHT_ACTIVE_CLASS_NAME);
+//         });
+//     }
+//     switchOnLight(element) {
+//
+//         element.classList.add(LIGHTER_LIGHT_ACTIVE_CLASS_NAME);
+//         this.isEnabled = true;
+//         console.log(this.isEnabled);
+//     }
+//     attachEvents() {
+//         this.lights.forEach(light => {
+//             light.addEventListener('click', () => {
+//               this.switchOffLights();
+//               this.switchOnLight(light);
+//             });
+//         });
+//     }
+// }
+//
+// class LighterManager {
+//     constructor(button, arrayOfLighters) {
+//         this.button = button;
+//         this.lighters = arrayOfLighters;
+//
+//         this.button.addEventListener('click', () => {
+//             console.log(this.lighters[0].isEnabled);
+//         })
+//
+//     }
+// }
+
+
+//const Lighter2 = new LighterManager(document.querySelector('button'),[Lighter2]);
+
+var Lighter = exports.Lighter = function () {
+    function Lighter(targetEl) {
+        var _this = this;
+
+        _classCallCheck(this, Lighter);
+
+        this.target = targetEl;
+        this.control = targetEl.querySelector('.bulb__control');
+        this.lighter = targetEl.querySelector('.bulb__lighter_green');
+        this.lighter = targetEl.querySelector('.bulb__lighter_yellow');
+        this.lighter = targetEl.querySelector('.bulb__lighter_orange');
+        this.lighter = targetEl.querySelector('.bulb__lighter_blue');
+        this.lighter = targetEl.querySelector('.bulb__lighter_violet');
+        this.isEnabled = false;
+        console.log(this);
+        this.control.addEventListener('click', function () {
+            return _this.toggle();
+        });
+    }
+
+    _createClass(Lighter, [{
+        key: 'switchOn',
+        value: function switchOn() {
+            this.target.classList.add('bulb_active');
+            this.isEnabled = true;
+        }
+    }, {
+        key: 'switchOff',
+        value: function switchOff() {
+            this.target.classList.remove('bulb_active');
+            this.isEnabled = false;
+        }
+    }, {
+        key: 'toggle',
+        value: function toggle() {
+            if (this.isEnabled) {
+                this.switchOff();
+            } else {
+                this.switchOn();
+            }
+        }
+    }]);
+
+    return Lighter;
+}();
+
+//      render() {
+//         this.control = document.createElement('button');
+//         this.lighter = document.createElement('div');
+//
+//         this.control.classList.add('bulb__control');
+//
+//          this.lighter.classList.add('bulb__lighter_green');
+//
+//
+//          this.control.textContent = 'Toggle';
+//
+//         this.target.appendChild(this.lighter);
+//          this.target.appendChild(this.control);
+//          this.target.classList.add('bulb');
+//
+//
+//     }
+//
+//
+// }
 
 /***/ })
 /******/ ]);
