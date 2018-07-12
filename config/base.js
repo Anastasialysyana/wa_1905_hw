@@ -20,7 +20,7 @@ const baseConf = (_path) => {
         js_for_kids: ['babel-polyfill', './src/js_for_kids/js_for_kids.js'],
         lesson_13: ['babel-polyfill', './src/lesson_13/lesson_13.js'],
         lesson_14: ['babel-polyfill', './src/lesson_14/lesson_14.js'],
-        accordeon: ['babel-polyfill', './src/accordeon/accordeon.js'],
+        hw_14: ['babel-polyfill', './src/hw_14/hw_14.js'],
 
     };
 
