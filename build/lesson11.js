@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 350);
+/******/ 	return __webpack_require__(__webpack_require__.s = 351);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9057,21 +9057,22 @@ module.exports = function (regExp, replace) {
 /* 347 */,
 /* 348 */,
 /* 349 */,
-/* 350 */
+/* 350 */,
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(351);
+module.exports = __webpack_require__(352);
 
 
 /***/ }),
-/* 351 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _lighter = __webpack_require__(352);
+var _lighter = __webpack_require__(353);
 
 var firstLighter = new _lighter.Lighter(document.querySelector('#lighter1'));
 
@@ -9253,7 +9254,7 @@ var firstLighter = new _lighter.Lighter(document.querySelector('#lighter1'));
 // animal5.bird();
 
 /***/ }),
-/* 352 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9266,7 +9267,7 @@ exports.Lighter = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(353);
+__webpack_require__(354);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -9315,7 +9316,7 @@ var Lighter = function () {
 exports.Lighter = Lighter;
 
 /***/ }),
-/* 353 */
+/* 354 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

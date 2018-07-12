@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 340);
+/******/ 	return __webpack_require__(__webpack_require__.s = 371);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9036,7 +9036,12 @@ module.exports = function (regExp, replace) {
 /***/ }),
 /* 327 */,
 /* 328 */,
-/* 329 */,
+/* 329 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 330 */,
 /* 331 */,
 /* 332 */,
@@ -9047,27 +9052,145 @@ module.exports = function (regExp, replace) {
 /* 337 */,
 /* 338 */,
 /* 339 */,
-/* 340 */
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(341);
+module.exports = __webpack_require__(372);
 
 
 /***/ }),
-/* 341 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(342);
+__webpack_require__(329);
+
+__webpack_require__(373);
+
+var _accordion = __webpack_require__(374);
+
+var Accordion = new _accordion.myAccordion(document.querySelector('#my-accordion1'));
+var Accordion2 = new _accordion.myAccordion(document.querySelector('#my-accordion2'));
+var Accordion3 = new _accordion.myAccordion(document.querySelector('#my-accordion3'));
 
 /***/ }),
-/* 342 */
+/* 373 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 374 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.myAccordion = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(329);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var BASE_CLASS_NAME = 'accordion';
+var CLASS_ACTIVE_NAME = 'accordion__active';
+var CLASS_BUTTON_NAME = 'accordion__button';
+var CLASS_PANEL_NAME = 'accordion__panel';
+
+var myAccordion = exports.myAccordion = function () {
+    function myAccordion(targetElement) {
+        var _this = this;
+
+        _classCallCheck(this, myAccordion);
+
+        this.target = targetElement;
+        this.isEnabled = false;
+        this.render();
+        this.button.addEventListener('click', function () {
+            return _this.toggle();
+        });
+    }
+
+    _createClass(myAccordion, [{
+        key: 'myAccordionAdd',
+        value: function myAccordionAdd() {
+            this.target.classList.add(CLASS_ACTIVE_NAME);
+            this.isEnabled = true;
+        }
+    }, {
+        key: 'myAccordionRemove',
+        value: function myAccordionRemove() {
+            this.target.classList.remove(CLASS_ACTIVE_NAME);
+            this.isEnabled = false;
+        }
+    }, {
+        key: 'toggle',
+        value: function toggle() {
+            if (this.isEnabled) {
+                this.myAccordionRemove();
+            } else {
+                this.myAccordionAdd();
+            }
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            this.button = document.createElement('button');
+            this.panel = document.createElement('div');
+
+            this.button.classList.add(CLASS_BUTTON_NAME);
+            this.panel.classList.add(CLASS_PANEL_NAME);
+
+            this.button.textContent = 'Click here...';
+            this.panel.textContent = ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. \n' + '  Accusamus aliquam asperiores commodi earum id ipsa ipsum iusto necessitatibus nesciunt nihil non, \n' + '  omnis quidem ratione temporibus unde ut vero.';
+
+            this.target.appendChild(this.button);
+            this.target.appendChild(this.panel);
+            this.target.classList.add(BASE_CLASS_NAME);
+        }
+    }]);
+
+    return myAccordion;
+}();
 
 /***/ })
 /******/ ]);
