@@ -1,0 +1,49 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.lg-heading {
+  font-size: 6rem;
+}
+
+.sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background-color: rgba(lighten($primary-color, 2), 0.5);
+}
+
+.main-header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+color: $secondary-color;
+}
+
+.main-info {
+  padding: 4rem;
+  height: 100%;
+
+  &#home {
+    overflow: hidden;
+    h1 {
+     margin-top: 20vh;
+    }
+  }
+}
+
+.icons {
+  margin-top: 1rem;
+
+
+  a {
+    padding: 0.4rem;
+
+    &:hover {
+      color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+

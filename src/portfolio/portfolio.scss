@@ -1,0 +1,25 @@
+@import "./styles/variables.scss";
+@import "./styles/mixins.scss";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include background;
+  background-color: $primary-color;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+  line-height: 1.5;
+  color: $default-text-color;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: $default-text-color;
+}
