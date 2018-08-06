@@ -1,0 +1,35 @@
+@import "../../styles/vars.scss";
+
+//.grid {
+//  display: grid;
+//}
+
+
+.main-header {
+  min-height:  100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px $gutter;
+  }
+  &__logo {
+    color: $default-text-color;
+    font-weight: lighter;
+  }
+  &__container img {
+    width: 26.8px;
+    height: 26.8px;
+  }
+}
+
+.main-header img {
+  max-width: 100%;
+}
+
+.buttons__container {
+  display: flex;
+}
+

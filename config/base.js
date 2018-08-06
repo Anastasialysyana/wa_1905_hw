@@ -10,17 +10,8 @@ const baseConf = (_path) => {
     const VENDORS_NAME = 'vendors';
     const entry = {
         index: ['babel-polyfill', './src/index/index.js'],
-        lesson_6: ['babel-polyfill', './src/lesson_6/lesson_6.js'],
-        hw_6: ['babel-polyfill', './src/hw_6/hw_6.js'],
-        lesson7: ['babel-polyfill', './src/lesson7/lesson7.js'],
-        lesson9: ['babel-polyfill', './src/lesson9/lesson9.js'],
-        lesson10: ['babel-polyfill', './src/lesson10/lesson10.js'],
-        lesson11: ['babel-polyfill', './src/lesson11/lesson11.js'],
-        hw_12: ['babel-polyfill', './src/hw_12/hw_12.js'],
-        js_for_kids: ['babel-polyfill', './src/js_for_kids/js_for_kids.js'],
-        lesson_13: ['babel-polyfill', './src/lesson_13/lesson_13.js'],
-        lesson_14: ['babel-polyfill', './src/lesson_14/lesson_14.js'],
-        hw_14: ['babel-polyfill', './src/hw_14/hw_14.js'],
+        themoviebox: ['babel-polyfill', './src/themoviebox/themoviebox.js'],
+        portfolio: ['babel-polyfill', './src/portfolio/portfolio.js'],
 
     };
 

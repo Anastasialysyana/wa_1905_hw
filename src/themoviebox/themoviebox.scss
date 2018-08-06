@@ -1,0 +1,10 @@
+@import "./styles/base.scss";
+@import "./styles/media-queries.scss";
+@import "./components/header/header.scss";
+
+//HEADER BACKGROUND//
+
+.main-header {
+  background-image: url('./assets/featured-image-header.png');
+}
+
