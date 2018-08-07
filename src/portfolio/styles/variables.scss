@@ -4,3 +4,12 @@ $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url('./assets/background.png');
 $background-opacity: 0.8;
+
+//Set Text Color
+//@function set-text-color($color) {
+////  @if (lightness($color) > 40) {
+////    @return #000;
+////  } @else {
+////    @return #fff;
+////  }
+////}
